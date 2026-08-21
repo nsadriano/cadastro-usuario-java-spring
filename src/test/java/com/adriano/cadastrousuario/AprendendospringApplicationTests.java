@@ -1,4 +1,4 @@
-package com.javanauta.aprendendospring;
+package com.adriano.cadastrousuario;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
