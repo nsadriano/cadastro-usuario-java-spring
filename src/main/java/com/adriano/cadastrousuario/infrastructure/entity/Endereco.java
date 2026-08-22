@@ -1,11 +1,6 @@
 package com.adriano.cadastrousuario.infrastructure.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,17 +17,17 @@ public class Endereco {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "rua", length = 50)
+	//@Column(name = "rua", length = 50)
 	private String rua;
-	@Column(name = "numero", length = 10)
+	//@Column(name = "numero", length = 10)
 	private Long numero;
-	@Column(name = "complemento", length = 100)
+	//@Column(name = "complemento", length = 100)
 	private String complemento;
-	@Column(name = "cidade", length = 50)
+	//@Column(name = "cidade", length = 50)
 	private String cidade;
-	@Column(name = "estado", length = 2)
+	//@Column(name = "estado", length = 2)
 	private String estado;
-	@Column(name = "cep", length = 10)
+	//@Column(name = "cep", length = 10)
 	private String cep;
 
 }
