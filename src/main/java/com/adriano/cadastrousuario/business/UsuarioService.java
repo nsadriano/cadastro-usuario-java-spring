@@ -2,6 +2,7 @@ package com.adriano.cadastrousuario.business;
 
 import java.util.List;
 
+import com.adriano.cadastrousuario.infrastructure.entity.Endereco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ public class UsuarioService {
 	public Usuario salvarUsuario(Usuario usuario) {
 		try {
 			emailExiste(usuario.getEmail());
+
 			return usuarioRepository.save(usuario);
 		}catch(ConflictException e) {
 			throw new ConflictException("Email já cadastrado", e.getCause());
@@ -34,7 +36,8 @@ public class UsuarioService {
 			throw new ConflictException("Email já cadastrado", e.getCause());
 		}
 	}
-	
+
+
 	public boolean verificaEmailExistente(String email) {
 		return usuarioRepository.existsByEmail(email);
 	}
