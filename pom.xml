@@ -8,10 +8,10 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.javanauta</groupId>
-	<artifactId>aprendendospring</artifactId>
+	<groupId>com.adriano</groupId>
+	<artifactId>cadastrousuario</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>aprendendospring</name>
+	<name>cadastrousuario</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -68,27 +68,30 @@
 			<scope>test</scope>
 		</dependency>
 		
-		
-	   <dependency>
-     		<groupId>com.h2database</groupId>
-      		<artifactId>h2</artifactId>
-      		<scope>runtime</scope>
-    	</dependency>
-    	
+
 		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
 		</dependency>
 
-        <!-- Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-flyway -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-flyway</artifactId>
-            <version>4.1.0</version>
-            <scope>compile</scope>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-database-postgresql</artifactId>
         </dependency>
-    
+
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+
 	</dependencies>
 
 	<build>
